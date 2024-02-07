@@ -1,9 +1,9 @@
 <script >
-import AppSerchbar from './AppSearchbar.vue';
+import AppSearchbar from '../components/AppSearchbar.vue';
 export default {
     name: 'AppHeder',
     components: {
-        AppSerchbar
+        AppSearchbar
     },
 }
 
@@ -12,7 +12,7 @@ export default {
 <template>
     <div class="container d-flex">
         <h1>BoolFlix</h1>
-        <AppSerchbar />
+        <AppSearchbar />
     </div>
 </template>
 

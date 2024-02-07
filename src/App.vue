@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { store } from './data/store.js';
 import AppMain from './components/AppMain.vue';
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from '../src/components/AppHeader.vue'
 
 export default {
     name: 'BoolFlix',

@@ -1,18 +1,18 @@
 <script>
 export default {
-    name: 'AppSerchbar',
+    name: 'AppSearchbar',
     data: () => ({
-        serchFilm: ''
+        searchFilm: ''
     }),
-    emits: ['serch-film'],
+    emits: ['search-film'],
 }
 </script>
 
 <template>
     <div class="input-group mb-3">
-        <input @keyup.enter="$emit('serch-film', serchFilm)" type="text" class="form-control"
-            placeholder="Cerca il tuo film" v-model.trim="serchFilm">
-        <button class="btn btn-outline-secondary" type="button" @click="$emit('serch-film', serchFilm)">Button</button>
+        <input @keyup.enter="$emit('search-film', searchFilm)" type="text" class="form-control"
+            placeholder="Cerca il tuo film" v-model.trim="searchFilm">
+        <button class="btn btn-outline-secondary" type="button" @click="$emit('search-film', searchFilm)">Button</button>
     </div>
 </template>
 
