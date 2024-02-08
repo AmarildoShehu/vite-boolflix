@@ -1,11 +1,19 @@
 <script >
-// import axios from 'axios';
-// import { api } from './data/index.js'
-// import { store } from './data/store.js';
+import axios from 'axios';
+import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
+
+export default {
+    name: 'BoolFlix',
+    components: { AppHeader, AppMain },
+}
 
 </script>
 
-<template></template>
+<template>
+    <AppHeader />
+    <AppMain />
+</template>
 
 <style lang="scss" scoped>
 @use './assets/scss/style.sass'
