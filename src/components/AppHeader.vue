@@ -12,7 +12,7 @@ export default {
 <template>
     <div class="container d-flex">
         <h1>BoolFlix</h1>
-        <AppSearchbar />
+        <AppSearchbar @serch-film="$emit('serch', $event)" />
     </div>
 </template>
 

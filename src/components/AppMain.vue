@@ -1,5 +1,5 @@
 <script >
-import ListFilms from './main_Component/listFilms.vue';
+import ListFilms from './main_Component/ListFilms.vue';
 export default {
 
     name: 'AppMain',

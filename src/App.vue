@@ -5,15 +5,15 @@ import AppMain from './components/AppMain.vue';
 import AppHeader from '../src/components/AppHeader.vue'
 
 export default {
-    name: 'BoolFlix',
+    name: 'Boolflix',
     components: {
         AppHeader,
         AppMain
     },
     methods: {
-        serchedResults(serchFilm) {
-            const endpointFilm = `https://api.themoviedb.org/3/search/movie?query=${serchFilm}&api_key=c3bd16a79a46d1ae2f5c9428ff80fe05`
-            axios.get(endpointFilm).then(res => {
+        serchedResults(serchMovies) {
+            const endpointMovies = `https://api.themoviedb.org/3/search/movie?query=${serchMovies}&api_key=c3bd16a79a46d1ae2f5c9428ff80fe05`
+            axios.get(endpointMovies).then(res => {
                 store.films = res.data.results
             })
         }

@@ -13,10 +13,7 @@ export default {
 </script>
 
 <template>
-    <div v-for="film in store.films" :key="film.result.id">
-        <FilmCard :titolo="film.results.title" :titoloOriginale="film.results.original_title"
-            :lingua="film.results.original_language" :voto="film.results.vote_average" />
-    </div>
+    <FilmCard v-for="film in store.films" :key="film.id" :FilmCard="film" />
 </template>
 
 <style scoped></style>
