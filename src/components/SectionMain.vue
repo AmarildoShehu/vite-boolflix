@@ -11,12 +11,22 @@ export default {
 </script>
 
 <template>
-    <h4 v-if="shows.length">{{ title }}</h4>
-    <div class="row flex-nowrap">
+    <h4 class="mt-5" v-if="shows.length">{{ title }}</h4>
+    <div class="netflix-carousel">
         <div class="col" v-for="show in shows" :key="show.id">
             <CardShow :show="show" :maxVote="5" />
         </div>
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.netflix-carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    gap: 2rem;
+    height: 25rem;
+    align-items: center
+}
+</style>
