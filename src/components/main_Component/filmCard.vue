@@ -26,8 +26,8 @@ export default {
 </script>
 
 <template>
+    <img :src="image" :alt="production.poster_path">
     <ul>
-        <img :src="image" :alt="production.poster_path">
         <li> {{ title }}</li>
         <li>{{ originalTitle }}</li>
         <li>
@@ -38,4 +38,4 @@ export default {
     </ul>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped></style> 

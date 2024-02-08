@@ -1,19 +1,22 @@
 <script >
 import axios from 'axios';
+import { api } from './data/index.js'
 import { store } from './data/store.js';
 import AppMain from './components/AppMain.vue';
-import AppHeader from '../src/components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue'
 
 export default {
     name: 'Boolflix',
+    data: () => ({ store }),
+
     components: {
         AppHeader,
         AppMain
     },
     methods: {
-        serchedResults(serchMovies) {
-            const endpointMovies = `https://api.themoviedb.org/3/search/movie?query=${serchMovies}&api_key=c3bd16a79a46d1ae2f5c9428ff80fe05`
-            axios.get(endpointMovies).then(res => {
+        serchedResults(serchFilm) {
+            const endpointFilm = `https://api.themoviedb.org/3/search/movie?query=${serchFilm}&api_key=c3bd16a79a46d1ae2f5c9428ff80fe05`
+            axios.get(endpointFilm).then(res => {
                 store.films = res.data.results
             })
         }
@@ -22,7 +25,8 @@ export default {
 </script>
 
 <template>
-    <AppHeader />
+    <AppHeader @serch="serchedResults" />
+    <!-- @serch="serchedResults" -->
     <AppMain />
 </template>
 

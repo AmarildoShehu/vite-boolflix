@@ -1,19 +1,29 @@
 <script>
 export default {
-    name: 'AppSearchbar',
+    name: 'AppSerchbar',
     data: () => ({
         searchFilm: ''
     }),
-    emits: ['search-film'],
+    props: {
+        buttonLabel: String,
+        placeholder: String
+    },
+
+    emits: ['search-film', 'term-change'],
+
 }
 </script>
 
 <template>
-    <div class="input-group mb-3">
-        <input @keyup.enter="$emit('search-film', searchFilm)" type="text" class="form-control"
-            placeholder="Cerca il tuo film">
-        <button class="btn btn-outline-secondary" type="button" @click="$emit('search-film', searchFilm)">Button</button>
-    </div>
+    <form @submit.prevent="$emit('search-film',)">
+        <input type="text" v-model.trim="searchFilm" @keyup="$emit('term-change', searchFilm)" :placeholder="placeholder">
+
+        <button>{{ buttonLabel }}</button>
+    </form>
+    <!-- <div class="align-self-center">
+        <input @keyup.enter="$emit('serch-film', serchFilm)" type="text" placeholder="film" v-model.trim="serchFilm">
+        <button type="button" @click="$emit('serch-film', serchFilm)">Button</button>
+    </div> -->
 </template>
 
 <style scoped></style>

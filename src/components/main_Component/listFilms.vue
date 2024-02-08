@@ -13,7 +13,10 @@ export default {
 </script>
 
 <template>
-    <FilmCard v-for="film in store.films" :key="film.id" :FilmCard="film" />
+    <section id="films-list">
+        <h1>Films</h1>
+        <ProductionCard v-for="movie in store.movies" :key="movie.id" :production="movie" />
+    </section>
 </template>
 
 <style scoped></style>
