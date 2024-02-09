@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-    <AppHeader @search-movies="fetchShows" buttonLabel="Cerca" placeholder="Scrivi qui" />
+    <AppHeader @search-movies="fetchShows" buttonLabel="Cerca" placeholder="Cerca qui il tuo film" />
     <AppMain :shows="store" />
 </template>
 

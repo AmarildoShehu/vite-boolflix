@@ -14,10 +14,12 @@ export default {
 <template>
     <header>
         <navbar class="container d-flex justify-content-between navbar">
-            <h1 class="title">BOOLFLIX</h1>
-            <form @submit.prevent="$emit('search-movies', inputSearch)" id="searchBar">
+            <div>
+                <img class="n-logo" src="../assets/img/Netflix_Logo.png" alt="Netflix logo">
+            </div>
+            <form class="d-flex align-items-center" @submit.prevent="$emit('search-movies', inputSearch)" id="searchBar">
                 <input class="searchbar" type="text" :placeholder="placeholder" v-model.trim="inputSearch">
-                <button>{{ buttonLabel }}</button>
+                <button class="btn">{{ buttonLabel }}</button>
             </form>
         </navbar>
 
@@ -43,17 +45,12 @@ header {
     box-shadow: 0px 20px 20px 20px rgb(10 10 10) inset, 9px 0 0px rgb(255 255 255 / 50%);
 }
 
+
 .navbar {
     align-items: center;
     font-size: 15px;
     padding-left: 4%;
     padding-right: 4%;
-}
-
-.title {
-    color: rgb(229, 9, 20);
-    fill: currentColor;
-    display: block;
 }
 
 .searchbar {
@@ -65,5 +62,20 @@ header {
     width: 15rem;
     border: 1px solid #595959;
     margin: 0.3rem;
+}
+
+.n-logo {
+    height: 5rem;
+}
+
+.btn {
+    background-color: rgb(229, 9, 20);
+    font-weight: 700;
+}
+
+.btn:hover {
+    // // transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+    background: rgb(193, 17, 25);
+
 }
 </style>
