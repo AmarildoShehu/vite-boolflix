@@ -24,17 +24,19 @@ export default {
     <main>
         <div class="">
             <div class=" d-flex align-items-center ">
-                <button class="" @click=" scrollShows('movies', -1)">Precedenti Film</button>
+                <span class="arrowstyle fa-solid fa-chevron-left fa-2xl" @click=" scrollShows('movies', -1)"></span>
                 <div class="container">
                     <SectionMain :shows="shows.listMovies" title="Film" ref="moviesSection" />
                 </div>
 
-                <button @click="scrollShows('movies', 1)">Successivi Film</button>
+                <span class="arrowstyle fa-solid fa-chevron-right fa-2xl" @click="scrollShows('movies', 1)"></span>
             </div>
             <div class="d-flex align-items-center">
-                <button @click="scrollShows('tvShows', -1)">Precedenti Programmi TV</button>
-                <SectionMain :shows="shows.listTvShows" title="Programmi TV" ref="tvShowsSection" />
-                <button @click="scrollShows('tvShows', 1)">Successivi Programmi TV</button>
+                <span class="arrowstyle fa-solid fa-chevron-left fa-2xl" @click="scrollShows('tvShows', -1)"></span>
+                <div class="container">
+                    <SectionMain :shows="shows.listTvShows" title="Programmi TV" ref="tvShowsSection" />
+                </div>
+                <span @click="scrollShows('tvShows', 1)" class="arrowstyle fa-solid fa-chevron-right fa-2xl"></span>
             </div>
         </div>
     </main>
@@ -44,5 +46,10 @@ export default {
 main {
     background: #070707ef;
     padding-top: 5rem;
+}
+
+.arrowstyle {
+    margin: 0 2rem 0 2rem;
+    color: white
 }
 </style>
