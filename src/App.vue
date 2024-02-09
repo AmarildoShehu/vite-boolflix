@@ -40,7 +40,5 @@ export default {
     <AppMain :shows="store" />
 </template>
 
-<style lang="scss" scoped>
-@use './assets/scss/style.sass'
-</style>
+<style lang="scss" scoped></style>
 

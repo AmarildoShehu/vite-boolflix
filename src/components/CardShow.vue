@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .poster {
-    height: 20rem;
+    height: 18rem;
 }
 
 .card-container {

@@ -39,12 +39,11 @@ header {
 
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, #070707 5px, #070707cc);
+    background: #070707f5;
     height: 5rem;
     align-items: center;
     box-shadow: 0px 20px 20px 20px rgb(10 10 10) inset, 9px 0 0px rgb(255 255 255 / 50%);
 }
-
 
 .navbar {
     align-items: center;
